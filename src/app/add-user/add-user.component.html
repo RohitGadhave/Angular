@@ -1,1 +1,8 @@
-<p>add-user works!</p>
+<form (ngSubmit)="onFormSubmit()">
+    <input type="file" name="image" (change)="onFileSelected($event)"><br>
+    <input type="text" name="fname" [(ngModel)]="model.fname"><br>
+    <input type="text" name="lname" [(ngModel)]="model.lname"><br>
+    <input type="email" name="email" [(ngModel)]="model.email"><br>
+    <input type="password" name="pass" [(ngModel)]="model.pass"><br>
+    <button type="submit">submit</button>
+</form>
